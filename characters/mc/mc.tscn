@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dd7hnnyl71665"]
+
+[ext_resource type="Script" path="res://characters/mc/mc.gd" id="1_mkh7m"]
+[ext_resource type="Texture2D" uid="uid://e0r3l0io8xjr" path="res://art/characters/plague_priest_spritesheet.png" id="1_yjmr7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s4lfa"]
+
+[node name="PlaguePriest" type="CharacterBody2D"]
+script = ExtResource("1_mkh7m")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_yjmr7")
+hframes = 4
+vframes = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_s4lfa")

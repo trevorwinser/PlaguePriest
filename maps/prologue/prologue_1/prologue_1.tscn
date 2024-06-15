@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://6lqnwxjlg1ny"]
+
+[ext_resource type="PackedScene" uid="uid://dd7hnnyl71665" path="res://characters/mc/mc.tscn" id="1_3n6of"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="PlaguePriest" parent="." instance=ExtResource("1_3n6of")]
+position = Vector2(39, 37)
