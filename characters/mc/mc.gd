@@ -43,8 +43,8 @@ func pick_new_state():
 		state += "Idle"
 	if (is_priest):
 		priest_state.travel(state)
-	#else:
-		#plague_state.travel(state)
+	else:
+		plague_state.travel(state)
 	
 func _input(event):
 	if event.is_action_pressed("switch"):
