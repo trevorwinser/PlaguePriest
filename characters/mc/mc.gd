@@ -32,7 +32,7 @@ func update_animation_parameters(move_input : Vector2):
 	if (move_input != Vector2.ZERO):
 			animation_tree.set("parameters/Priest/Walk/blend_position", move_input)
 			animation_tree.set("parameters/Priest/Idle/blend_position", move_input)
-			animation_tree.set("parameters/Plague/Walk/bledsnd_position", move_input)
+			animation_tree.set("parameters/Plague/Walk/blend_position", move_input)
 			animation_tree.set("parameters/Plague/Idle/blend_position", move_input)
 
 func pick_new_state():
