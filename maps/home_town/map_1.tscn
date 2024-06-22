@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwcc5gnxqxdb2"]
+
+[ext_resource type="Texture2D" uid="uid://bdihjo4bq2y1u" path="res://art/maps/map_1.png" id="1_hkhe2"]
+[ext_resource type="PackedScene" uid="uid://dd7hnnyl71665" path="res://characters/mc/mc.tscn" id="2_7r4bc"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Map1" type="Sprite2D" parent="."]
+position = Vector2(432, 248)
+texture = ExtResource("1_hkhe2")
+
+[node name="PlaguePriest" parent="." instance=ExtResource("2_7r4bc")]
+position = Vector2(8, 8)
