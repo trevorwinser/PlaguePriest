@@ -8,7 +8,7 @@ extends CharacterBody2D
 @onready var character_state = animation_tree.get("parameters/playback")
 @onready var priest_state = animation_tree.get("parameters/Priest/playback")
 @onready var plague_state = animation_tree.get("parameters/Plague/playback")
-var input_direction = Vector2.ZERO
+
 
 func _ready():
 	update_animation_parameters(starting_direction)
@@ -18,8 +18,7 @@ func _physics_process(_delta):
 		Input.get_action_strength("right") - Input.get_action_strength("left"),
 		Input.get_action_strength("down") - Input.get_action_strength("up")
 	)
-	if (input_direction != Vector2.ZERO):
-		print(input_direction)
+	
 	velocity = input_direction * move_speed
 
 	move_and_slide()
@@ -53,14 +52,6 @@ func _input(event):
 			character_state.travel("Priest")
 		else:
 			character_state.travel("Plague")
-	elif event.is_action_pressed("exit"):
+	if event.is_action_pressed("exit"):
 			get_tree().quit()
-	elif event.is_action_pressed("up"):
-		input_direction = Vector2(0,-1)
-	elif event.is_action_pressed("down"):
-		input_direction = Vector2(0,1)
-	elif event.is_action_pressed("left"):
-		input_direction = Vector2(-1,0)
-	elif event.is_action_pressed("right"):
-		input_direction = Vector2(1,0)
 		
