@@ -46,12 +46,12 @@ func pick_new_state():
 		plague_state.travel(state)
 	
 func _input(event):
-	if event.is_action_pressed("switch"):
-		is_priest = !is_priest
-		if (is_priest):
-			character_state.travel("Priest")
-		else:
-			character_state.travel("Plague")
+	#if event.is_action_pressed("switch"):
+		#is_priest = !is_priest
+		#if (is_priest):
+			#character_state.travel("Priest")
+		#else:
+			#character_state.travel("Plague")
 	if event.is_action_pressed("exit"):
 			get_tree().quit()
 		
